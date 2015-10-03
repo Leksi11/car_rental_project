@@ -4,12 +4,15 @@
 # TEAM
 
     <name> -- <role> -- <twitter>
+    Yaroslav Yanushevskiy -- Developer -- 
 
 # THANKS
 
     <name>
 
 # TECHNOLOGY COLOPHON
-
-    HTML5, CSS3
+	Django
+    HTML5 Boilerplace,
+    Twitter bootstrap
     jQuery, Modernizr
+
