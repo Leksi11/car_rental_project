@@ -1,11 +1,12 @@
 {% extends "base.html" %}
 {% block head_title %}Car_rental{% endblock %}
+{% load i18n %}
 <!-- Main jumbotron for a primary marketing message or call to action -->
 {% block content %}
     <div class="jumbotron">
       <div class="container">
-        <h1>Hello, world!</h1>
-        <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+        <h1>{% trans "Welcome to our car rental service!"%}</h1>
+        <p>{% blocktrans %}Our service helps you find an auto to rent! Also you can publish your own auto to rent it to other people! Isn't it great?! {% endblocktrans %}</p>
         <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
       </div>
     </div>
