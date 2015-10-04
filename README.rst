@@ -1,8 +1,3 @@
-.. Car_rental documentation master file, created by
-   sphinx-quickstart on Sun Oct  4 12:23:05 2015.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
-
 Welcome to Car_rental's documentation!
 ======================================
 
@@ -18,20 +13,3 @@ Some of the Car_rental Project functionalities are:
 
 To start using the Project, check out the :doc:`requirements` 
 and next the :doc:`quick_start`.
-
-Contents:
-
-.. toctree::
-   :maxdepth: 2
-   requirements
-   quick_start
-
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
-
