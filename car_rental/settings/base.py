@@ -16,6 +16,10 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
+FIXTURE_DIRS = (
+    os.path.join(BASE_DIR, 'fixtures'),
+)
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
 
@@ -67,6 +71,8 @@ TEMPLATES = [
                 'django.template.context_processors.tz',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                #allauth template tags
+                "django.core.context_processors.request",
 
             ],
         },
@@ -75,7 +81,29 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'car_rental.wsgi.application'
 
+AUTHENTICATION_BACKENDS = (
+    #default
+    "django.contrib.auth.backends.ModelBackend",
+    #allauth specific methods e.g. login by email
+    "allauth.account.auth_backends.AuthenticationBackend",
+)
 
+
+
+INSTALLED_APPS += (
+    #django sites framework
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    #login via google
+    'allauth.socialaccount.providers.google',
+)
+SITE_ID = 1
+ACCOUNT_USERNAME_REQUIRED = False
+ACCOUNT_EMAIL_VERIFICATION = "none"
+SOCIALACCOUNT_QUERY_EMAIL = True
+LOGIN_REDIRECT_URL = "/"
 # Database
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
 
