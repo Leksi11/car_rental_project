@@ -41,6 +41,14 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    #django sites framework
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    #login via google
+    'allauth.socialaccount.providers.google',
+    'auto',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -89,16 +97,6 @@ AUTHENTICATION_BACKENDS = (
 )
 
 
-
-INSTALLED_APPS += (
-    #django sites framework
-    'django.contrib.sites',
-    'allauth',
-    'allauth.account',
-    'allauth.socialaccount',
-    #login via google
-    'allauth.socialaccount.providers.google',
-)
 SITE_ID = 1
 ACCOUNT_USERNAME_REQUIRED = False
 ACCOUNT_EMAIL_VERIFICATION = "none"
@@ -109,8 +107,8 @@ LOGIN_REDIRECT_URL = "/"
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'car_rentaldb',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'db.sqlite3',
         'USER': 'car_admin',
         'PASSWORD': 'carlogin',
         'HOST': '',
